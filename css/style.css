@@ -1,3 +1,23 @@
+/* my variabel color */
+:root {
+    
+    --primary-color: #00f0ff;      /*cyan-bright */
+    --secondary-color: #3b82f6;        /*blue-bright */
+    --background-color: #000;
+    --text-color: #ffffff;
+    
+    /* +overlay */
+    --link-bg: rgba(0, 240, 255, 0.05); 
+    --link-border: rgba(0, 240, 255, 0.2);
+    --link-hover-bg: rgba(59, 130, 246, 0.1);
+    --link-hover-border: rgba(0, 240, 255, 0.5);
+
+    /* glow effect */
+    --glow-effect: 0 0 20px rgba(0, 240, 255, 0.5);
+    --glow-strong: 0 0 30px rgba(0, 240, 255, 0.7);
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -7,11 +27,11 @@
 
 body {
     min-height: 100vh;
-    background: #000;
+    background: var(--background-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--text-color);
     position: relative;
     overflow: hidden;
 }
@@ -32,7 +52,7 @@ body {
     height: 200%;
     top: -50%;
     left: -50%;
-    background-image: linear-gradient(90deg, rgba(147, 51, 234, 0.1) 1px, transparent 1px), linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px);
+    background-image: linear-gradient(90deg, var(--link-border) 1px, transparent 1px), linear-gradient(var(--link-border) 1px, transparent 1px);
     background-size: 40px 40px;
     transform: rotateX(60deg);
     animation: grid 20s linear infinite;
@@ -62,7 +82,7 @@ body {
     height: 120px;
     border-radius: 20px;
     margin-bottom: 20px;
-    border: 2px solid rgba(147, 51, 234, 0.3);
+    border: 2px solid var(--primary-color);
     position: relative;
 }
 
@@ -70,7 +90,7 @@ body {
     content: '';
     position: absolute;
     inset: -10px;
-    background: radial-gradient(circle at center, rgba(147, 51, 234, 0.4) 0%, transparent 70%);
+    background: radial-gradient(circle at center, var(--primary-color) 0%, transparent 70%);
     border-radius: 25px;
     z-index: -1;
     filter: blur(10px);
@@ -79,7 +99,7 @@ body {
 .name {
     font-size: 28px;
     font-weight: bold;
-    background: linear-gradient(90deg, #a855f7 0%, #7c3aed 100%);
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 8px;
@@ -99,14 +119,14 @@ body {
 }
 
 .link {
-    background: rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(147, 51, 234, 0.2);
+    background: var(--link-bg);
+    border: 1px solid var(--link-border);
     padding: 20px;
     border-radius: 12px;
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
     position: relative;
@@ -115,8 +135,8 @@ body {
 
 .link:hover {
     transform: translateY(-2px);
-    border-color: rgba(147, 51, 234, 0.4);
-    background: rgba(147, 51, 234, 0.1);
+    border-color: var(--link-hover-border);
+    background: var(--link-hover-bg);
 }
 
 .link::before {
@@ -126,7 +146,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
+    background: linear-gradient(90deg, transparent 0%, var(--link-hover-bg) 50%, transparent 100%);
     transition: 0.5s;
 }
 
@@ -137,7 +157,7 @@ body {
 .icon {
     width: 40px;
     height: 40px;
-    background: rgba(147, 51, 234, 0.2);
+    background: var(--link-border);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -148,11 +168,11 @@ body {
 .icon svg {
     width: 20px;
     height: 20px;
-    fill: #a855f7;
+    fill: var(--primary-color);
 }
 
 @media (max-width: 480px) {
-    .container { width: 95%; }
+    .container { width: 100%; }
     .profile-img { width: 100px; height: 100px; }
     .name { font-size: 24px; }
 }
