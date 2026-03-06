@@ -1,13 +1,34 @@
+/* jetbrains-mono-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/jetbrains-mono-v24-latin-regular.woff2') format('woff2');
+}
+
+/* jetbrains-mono-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/jetbrains-mono-v24-latin-700.woff2') format('woff2');
+}
+
+
 /* my variabel color */
 :root {
-    
-    --primary-color: #00f0ff;      /*cyan-bright */
-    --secondary-color: #3b82f6;        /*blue-bright */
+
+    --primary-color: #00f0ff;
+    /*cyan-bright */
+    --secondary-color: #3b82f6;
+    /*blue-bright */
     --background-color: #000;
     --text-color: #ffffff;
-    
+
     /* +overlay */
-    --link-bg: rgba(0, 240, 255, 0.05); 
+    --link-bg: rgba(0, 240, 255, 0.05);
     --link-border: rgba(0, 240, 255, 0.2);
     --link-hover-bg: rgba(59, 130, 246, 0.1);
     --link-hover-border: rgba(0, 240, 255, 0.5);
@@ -22,7 +43,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'JetBrains Mono', monospace;
 }
 
 body {
@@ -58,12 +79,17 @@ body {
 }
 
 @keyframes grid {
-    0% { transform: rotateX(60deg) translateY(0); }
-    100% { transform: rotateX(60deg) translateY(40px); }
+    0% {
+        transform: rotateX(60deg) translateY(0);
+    }
+
+    100% {
+        transform: rotateX(60deg) translateY(40px);
+    }
 }
 
 .container {
-    max-width: 800px;
+    max-width: 680px;
     width: 100%;
     padding: 20px;
     position: relative;
@@ -96,19 +122,21 @@ body {
 }
 
 .name {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 32px;
+    font-weight: 700;
     background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 8px;
+    letter-spacing: -0.5px;
 }
 
 .bio {
     color: rgba(255, 255, 255, 0.8);
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 10px;
+    font-size: 11px;
+    font-weight: 400;
 }
 
 .links {
@@ -124,12 +152,16 @@ body {
     border-radius: 10px;
     display: flex;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: var(--text-color);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-size: 16px;
 }
 
 .link:hover {
@@ -161,7 +193,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 15px;
+    position: absolute;
+    left: 20px;
 }
 
 .icon svg {
@@ -171,7 +204,16 @@ body {
 }
 
 @media (max-width: 480px) {
-    .container { width: 100%; }
-    .profile-img { width: 100px; height: 100px; }
-    .name { font-size: 24px; }
+    .container {
+        width: 100%;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .name {
+        font-size: 24px;
+    }
 }
