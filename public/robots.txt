@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /preview/
+Disallow: /css/
+
+Sitemap: https://www.bio.aadnanmt.web.id/sitemap.xml
