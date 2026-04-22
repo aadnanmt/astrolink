@@ -1,17 +1,19 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Background from '../components/Background.astro';
+import Profile from '../components/Profile.astro';
+import Link from '../components/Link.astro';
+import { siteConfig } from '../data/config';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout {...siteConfig.seo}>
+  <Background />
+  <div class="container">
+    <Profile name={siteConfig.profile.name} bio={siteConfig.profile.bio} image={siteConfig.profile.image} />
+    <div class="links">
+      {siteConfig.links.map((link) => (
+        <Link name={link.name} url={link.url} icon={link.icon} />
+      ))}
+    </div>
+  </div>
+</Layout>
