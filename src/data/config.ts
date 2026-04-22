@@ -26,13 +26,13 @@ export const siteConfig: SiteConfig = {
     author: "Adnan Slamet Wibowo",
   },
   profile: {
-    name: "Adnan Slamet Wibowo",
-    bio: "Tech Enthusiast since 2016",
+    name: "aadnanmt",
+    bio: "Sains and Tech Enthusiast",
     image: "/img/me-act.webp",
   },
   links: [
     {
-      name: "GitHub Profile",
+      name: "GitHub",
       url: "https://github.com/aadnanmt",
       icon: `<svg viewBox="0 0 24 24">
                         <path
@@ -40,7 +40,7 @@ export const siteConfig: SiteConfig = {
                     </svg>`,
     },
     {
-      name: "GitLab Profile",
+      name: "GitLab",
       url: "https://gitlab.com/aadnanmt",
       icon: `<svg viewBox="0 0 24 24">
                         <path
@@ -79,7 +79,7 @@ export const siteConfig: SiteConfig = {
                     </svg>`,
     },
     {
-      name: "My Portfolio",
+      name: "Portfolio",
       url: "https://www.aadnanmt.web.id",
       icon: `<svg viewBox="0 0 24 24">
                             <path d="M14 3h7v7h-2V6.41l-9.29 9.29-1.42-1.42L17.59 5H14V3zM5 5h5V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-5h-2v5H5V5z"/>

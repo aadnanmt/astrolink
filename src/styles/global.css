@@ -98,8 +98,8 @@ body {
 }
 
 .profile-img {
-  width: 88px; /* 8 * 11 */
-  height: 88px;
+  width: 144px; /* 8 * 11 */
+  height: 144px;
   border-radius: 0;
   margin-bottom: var(--s3); /* 24px */
   border: 1px solid var(--border-dim);
@@ -113,19 +113,20 @@ body {
 }
 
 .name {
-  font-size: var(--f-name); /* 21px */
-  font-weight: 500;
+  font-size: var(--s3); /* 24px */
+  font-weight: 700;
   letter-spacing: 2px;
   margin-bottom: var(--s1); /* 8px */
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 .bio {
   color: var(--primary-color);
   letter-spacing: 2.5px;
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 400;
-  opacity: 0.5;
+  opacity: 0.7;
+  text-transform: lowercase;
 }
 
 .links {
@@ -148,7 +149,7 @@ body {
   font-size: var(--f-link); /* 13px */
   font-weight: 500;
   letter-spacing: 1.5px;
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 .link:hover {
