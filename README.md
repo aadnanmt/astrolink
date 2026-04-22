@@ -35,5 +35,5 @@ All commands are run from the root of the project, from a terminal:
 
 ## Acknowledgments
 
-- The original static HTML/CSS version was created by **ZeX**, as per the `LICENSE` file.
+- The original static HTML/CSS version was created by [ZeX](github.com/ddosnotification/links-portfolio), as per the `LICENSE` file.
 - This version was migrated to Astro to facilitate easier updates and management.
