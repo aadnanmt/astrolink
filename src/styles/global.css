@@ -1,6 +1,6 @@
 :root {
   --primary-color: #00f0ff;
-  --background-color: #050a0f;
+  --background-color: #000000;
   --text-color: #ffffff;
   --border-dim: rgba(0, 240, 255, 0.2);
   --border-bright: rgba(0, 240, 255, 1);
@@ -56,7 +56,7 @@ body {
     linear-gradient(var(--border-dim) 1px, transparent 1px);
   background-size: var(--s5) var(--s5);
   transform: rotateX(60deg);
-  opacity: 0.05;
+  opacity: 0.08;
 }
 
 .container {
